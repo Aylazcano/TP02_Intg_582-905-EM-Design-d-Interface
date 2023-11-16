@@ -14,11 +14,11 @@ a {
     }
 }
 
-.bouton-hero{
+.hero__bouton{
     background: linear-gradient(180deg, #62BDFC 0%, #8490FF 100%);
 }
 
-.bouton-hero a{
+.hero__bouton a{
     color:var(--color-white);
     text-transform: uppercase;
 }

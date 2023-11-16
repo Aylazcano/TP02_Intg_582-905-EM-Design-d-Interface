@@ -1,7 +1,4 @@
-.pieddepage{
-    padding:var(--spacing-lg) 0;
-
-    margin:50px;
+.footer{
 
     background-color:var(--color-tertiary);
 
@@ -17,13 +14,48 @@
     }
 
     ul{
-        display:flex
-        gap:10px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
     }
 
     .wrapper{
         display:flex;
+        width: auto;
+        height: 96px;
+        padding: 10px 110px 10px 104px;
+        margin:50px;
         justify-content: space-between;
         align-items:center;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        .wrapper{
+            flex-direction: column;
+            height: 151px;
+            display: flex;
+            padding: 20px 20px 35px 20px;
+            align-items: center;
+        }
+    }
+    
+    @media screen and (max-width: $breakpoint-xs) {
+        .wrapper{
+            flex-direction: column;
+            height: 151px;
+            display: flex;
+            padding: 20px 20px 35px 20px;
+            margin: 0 15px 0 15px;
+            align-items: center;
+            text-align: center;
+        }
+
+        ul{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 0;
+        }
+
     }
 }

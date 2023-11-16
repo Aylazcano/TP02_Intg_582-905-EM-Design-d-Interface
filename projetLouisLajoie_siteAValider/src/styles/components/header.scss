@@ -1,6 +1,7 @@
-.entete{
-
-    padding:var(--spacing-lg) 0;
+.header{
+    width: 100%; /* Par défaut, le header prend 100% de la largeur disponible */
+    max-width: 1440px; /* Pour éviter qu'il ne devienne trop large sur des écrans plus grands */
+    margin: 0 auto; /* Centrer le header dans la page */
 
     .logo{
         font-family:  var(--font-primary);
@@ -24,39 +25,40 @@
 
     .wrapper{
         display:flex;
+        width: 100%;
+        height: 101px;
+        padding: 0 120px 0 120px;
         justify-content: space-between;
         align-items: center;
+        align-content: center;
     }
-}
-
-.header__toggle{
-    span{
-        width:20px;
-        height:2px;
-        background-color: black;
-        display:block;
-    }
-
-    /*display:grid;*/
-    display:none;
-    gap:5px;
 }
 
 @media screen and (max-width: $breakpoint-sm) {
 
-    header nav{
-        display:none;
+    .header {
+        .wrapper{
+            height: 103px;
+            padding: 0 10px 0 10px;
+        }
+        
     }
+    
+    
 
-    .header__toggle{
-        display: grid;
-        /*ligne ci-dessous pas nécessaire*/
-        grid-template-columns: 1fr;
-    }
+
 
 }
 
-/*@media screen and (max-width: $breakpoint-sm) {
+@media screen and (max-width: $breakpoint-xm) {
+    .header {
+        .wrapper{
+            flex-direction: row;
+            width: 375px;
+            height: 159px;
+            flex-shrink: 0;
+        }
+        
+    }
 
-
-}*/
+}

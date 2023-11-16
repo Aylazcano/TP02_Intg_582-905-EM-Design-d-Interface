@@ -1,7 +1,12 @@
-.contenu{
+.content{
 
     padding:var(--spacing-lg) 0;
 
+    .wrapper{
+        display: flex;
+        align-items: center; /* Centre verticalement */
+        justify-content: center; /* Centre horizontalement */
+    }
     .card{
         width:100%;
         /*padding:var(--spacing-md);*/
@@ -15,6 +20,8 @@
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap:70px;
+        width: 1200px;
+        height: 522px;
     }
 
     h2{
@@ -26,8 +33,10 @@
 
 @media screen and (max-width: $breakpoint-sm) {
 
-        .contenu .cards {
+        .content .cards {
             grid-template-columns: 1fr 1fr;
+            width: auto;
+            height: auto;
         }
 
 
@@ -35,13 +44,23 @@
 
 @media screen and (max-width: $breakpoint-xs) {
 
-        .contenu .cards {
-            grid-template-columns: 1fr;
-        }
+    .content{
+        padding: 30px 0 30px 0;
+    }
 
-        h2{
-            font-size: var(--font-size-h3);
-        }
+    .content .cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+
+    .cards{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap:70px;
+        width: 1200px;
+        height: 522px;
+    }
 
 }
 
